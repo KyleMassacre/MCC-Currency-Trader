@@ -69,7 +69,7 @@ function trade() {
 
     index();
 }
-
+//I would maybe add this into your global funcs file
 function updatestat($statName, $newValue, $user = null) {
     global $db, $userid;
     if ($user == null) {
