@@ -95,7 +95,7 @@ function add() {
     $desc = (isset($_POST['description']) ? htmlentities($_POST['description']) : '');
     $callBack = (isset($_POST['call_back']) ? htmlentities($_POST['call_back'], ENT_NOQUOTES, "UTF-8") : '');
     echo "<form action='?action=add' method='POST'>";
-    echo "<th colspan='100%' align='center'>Add New Site</th>";
+    echo "<th colspan='100%' align='center'>Add New Trade</th>";
     echo "<tr>
 			<td>Name</td>
    <td><input type='text' name='name' value='{$name}' /></td>
@@ -204,7 +204,7 @@ function delete() {
     }
     index();
 }
-
+//I would maybe add this into your global funcs file
 function usertable_dropdown($ddname = "stats", $selected = -1) {
     global $db;
     $ret = "<select name='$ddname' type='dropdown'>";
