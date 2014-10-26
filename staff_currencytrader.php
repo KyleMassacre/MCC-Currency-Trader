@@ -10,6 +10,11 @@
  * Date: Oct 25, 2014 4:57:19 PM
  */
 include_once(__DIR__ . '/sglobals.php');
+if($ir['userid'] != 1) {
+	echo "Get the hell out";
+	echo "<script>setTimeout(\"document.location='index.php';\",1500);</script>";
+	exit($h->endpage());
+}
 
 if (!isset($_GET['action'])) {
     $_GET['action'] = 'index';
